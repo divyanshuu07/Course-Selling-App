@@ -1,5 +1,6 @@
 const express=require('express');
 const jwt=require('jsonwebtoken');
+const port=3000;
 
 const app=express();
 
@@ -18,4 +19,6 @@ app.get('/purchase',(req,res)=>{
 app.get('/course',(req,res)=>{
     res.send("This page is for seeing courses.")
 })
-app.listen(3000);
+app.listen(port,()=>{
+    console.log(`App is listening on port ${port}`)
+});
