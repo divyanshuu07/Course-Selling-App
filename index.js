@@ -4,20 +4,26 @@ const port=3000;
 
 const app=express();
 
-app.get('/login',(req,res)=>{
-    res.send("This page is for login")
+app.post("/user/signup",(req,res)=>{
+    res.json({
+        message:"signup endpoint"
+    })
 })
 
-app.get('/signup',(req,res)=>{
-    res.send("This page is for signup")
+app.post("/user/signin",(req,res)=>{
+    res.json({
+        message:"signin endpoint"
+    })
 })
 
-app.get('/purchase',(req,res)=>{
-    res.send("This page is for purchasing")
+app.post("/course/purchase",(req,res)=>{
+    res.json({
+        message:"purchase endpoint"
+    })
 })
 
-app.get('/course',(req,res)=>{
-    res.send("This page is for seeing courses.")
+app.post('/courses',(req,res)=>{
+    
 })
 app.listen(port,()=>{
     console.log(`App is listening on port ${port}`)
